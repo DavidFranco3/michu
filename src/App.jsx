@@ -28,7 +28,7 @@ function App() {
   return (
     <div style={fondoEstilos}>
       <div style={contenidoEstilos}>
-        <h1>feliz cumpleaños michu pituda</h1>
+        <h1>feliz cumpleaños michu pituda😾🎈</h1>
       </div>
     </div>
   );
