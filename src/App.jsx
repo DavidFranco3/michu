@@ -1,34 +1,61 @@
 import React from 'react';
 
 function App() {
-  // Estilos en línea para la imagen de fondo y el contenedor
-  const fondoEstilos = {
-    backgroundImage: 'url("/fondo.jpeg")', // Asegúrate de que la imagen esté en public
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '100vh', // Ocupa toda la altura de la pantalla
-    width: '100%', // Asegura que ocupe todo el ancho
+  const estilosGenerales = {
+    minHeight: '100vh',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    color: 'white',
-    textAlign: 'center',
-    position: 'absolute', // Permite que el fondo ocupe toda la pantalla
-    top: 0,
-    left: 0,
+    padding: '1rem',
+    backgroundColor: '#000',
+    boxSizing: 'border-box',
   };
 
-  // Estilos del contenedor del texto
-  const contenidoEstilos = {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)', // Fondo semi-transparente
-    padding: '2rem',
-    borderRadius: '10px',
+  const tarjetaEstilos = {
+    position: 'relative',
+    width: '100%',
+    maxWidth: '95vw', // Abarca casi todo el ancho en PC
+    borderRadius: '12px',
+    overflow: 'hidden',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+  };
+
+  const imagenEstilos = {
+    width: '100%',
+    height: 'auto',
+    display: 'block',
+  };
+
+  const textoEncima = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    color: 'white',
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '1rem',
+    textAlign: 'center',
+  };
+
+  const tituloEstilos = {
+    fontSize: 'clamp(1.5rem, 5vw, 3rem)',
+    marginBottom: '0.5rem',
+  };
+
+  const mensajeEstilos = {
+    fontSize: 'clamp(0.9rem, 2.5vw, 1.5rem)',
   };
 
   return (
-    <div style={fondoEstilos}>
-      <div style={contenidoEstilos}>
-        <h1>feliz cumpleaños michu pituda😾🎈</h1>
+    <div style={estilosGenerales}>
+      <div style={tarjetaEstilos}>
+        <img src="/fondo.jpeg" alt="Fondo cumpleaños" style={imagenEstilos} />
+
       </div>
     </div>
   );
